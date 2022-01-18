@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Aarushthebest's personal portfolio</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar background">
+            <ul class="nav-list">
+                <div class="logo"><img src="assets/My Logo.png" alt="logo"></div>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="rightNav">
+                <input type="text" name="search" id="search" placeholder="Search">
+                <button class="btn btn-sm">Go!</button>
+            </div>
+        </nav>
+
+        <section class="background skills">
+            <P>
+                These Are some of My coding Skills:
+            </P>
+            <div class= "container1">
+                <canvas id="myChart" style="max-width:300px; max-height:300px; margin: 30px 500px;"></canvas>
+              </div>
+              <script>
+                let myChart = document.getElementById('myChart').getContext('2d');
+
+              
+                Chart.defaults.color = 'White';
+                Chart.defaults.font.family = 'monospace';
+
+                  let skillChart = new Chart(myChart,{
+                      type:'pie',
+                      data:{
+                          labels:['Python', 'C#', 'Javascript', 'HTML', 'CSS', 'Others'],
+                          datasets:[{
+                              label:'Coding Skills',
+                              data:[
+                                15,
+                                5,
+                                30,
+                                40,
+                                5,
+                                5
+                            ],
+                            backgroundColor:[
+                                'Red',
+                                'Green',
+                                'Blue',
+                                'Blue',
+                                'Green',
+                                'Green'
+                                ],    
+                            borderWidth:2,
+                            borderColor:'white',
+                            hoverBorderWidth:3,
+                            hoverBorderColor:'Black'
+                            }],
+                    options:{},
+                  }});
+              </script>
+              <P>
+                These are some of the games I play most frequently:
+            </P>
+              <div class= "container2" style= " display:flex; flex-direction:reverse-column; width:500px; height:500px; min-width:500px; justify-items:center; min-height:500px; align-items:center;">
+                <canvas id="myChart2" style="max-width:340px; max-height:340px; margin-left:55px;"></canvas>
+              </div>
+              <script>
+                let myChart2 = document.getElementById('myChart2').getContext('2d');
+
+              
+                Chart.defaults.color = 'White';
+                Chart.defaults.font.family = 'monospace';
+
+                  let gameChart = new Chart(myChart2,{
+                      type:'pie',
+                      data:{
+                          labels:['Minecraft', 'RE-RUN', 'Fortnite', 'Amongus', 'Henry Stickmin', 'Others'],
+                          datasets:[{
+                              label:'Games I play',
+                              data:[
+                                40,
+                                10,
+                                20,
+                                20,
+                                5,
+                                5
+                            ],
+                            backgroundColor:[
+                                'Blue',
+                                'Green',
+                                'Red',
+                                'Red',
+                                'Green',
+                                'Green'
+                                ],    
+                            borderWidth:2,
+                            borderColor:'white',
+                            hoverBorderWidth:3,
+                            hoverBorderColor:'Black'
+                            }],
+                    options:{},
+                  }});
+              </script>
+        </section>
+    </body>
+</html>
